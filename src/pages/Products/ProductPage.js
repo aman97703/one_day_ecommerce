@@ -21,18 +21,19 @@ const ProductPage = () => {
   const allItems = useSelector((state) => getItemByID(state, id));
   const [disable, setDisable] = useState(false);
 
-  const getProduct = async () => {
-    await axios({
-      url: `https://fakestoreapi.com/products/${id}`,
-      method: "get",
-    }).then((res) => {
-      setProduct(res.data);
-    });
-  };
+
 
   useEffect(() => {
+    const getProduct = async () => {
+      await axios({
+        url: `https://fakestoreapi.com/products/${id}`,
+        method: "get",
+      }).then((res) => {
+        setProduct(res.data);
+      });
+    };
     getProduct();
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     disableRemove(allItems, setDisable);
