@@ -3,8 +3,22 @@ import { Drawer } from "@mui/material";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
+import Badge from "@mui/material/Badge";
+import { styled } from "@mui/material/styles";
+import { getItems } from "../../fearures/itemsSlice";
+import { useSelector } from "react-redux";
+
+const StyledBadge = styled(Badge)(({ theme }) => ({
+  "& .MuiBadge-badge": {
+    right: -3,
+    top: 13,
+    border: `2px solid ${theme.palette.background.paper}`,
+    padding: "0 4px",
+  },
+}));
 
 const Navbar = () => {
+  const allItems = useSelector(getItems);
   const [state, setState] = useState(false);
   const toggleDrawer = (open) => {
     setState(open);
@@ -21,21 +35,23 @@ const Navbar = () => {
           </p>
         </div>
         <div className="navLinks">
-          <p>
+          <p className="navLink">
             <NavLink to={"/"}>HOME</NavLink>
           </p>
-          <p>
+          <p className="navLink">
             <NavLink to={"/about"}>ABOUT</NavLink>
           </p>
-          <p>
+          <p className="navLink">
             <NavLink to={"/products"}>PRODUCTS</NavLink>
           </p>
-          <p>
+          <p className="navLink">
             <NavLink to={"/contact"}>CONTACT</NavLink>
           </p>
           <p>
             <NavLink to={"/cart"}>
-              <ShoppingCartOutlined />
+              <StyledBadge badgeContent={allItems.length} color="secondary">
+                <ShoppingCartOutlined />
+              </StyledBadge>
             </NavLink>
           </p>
         </div>
@@ -64,11 +80,6 @@ const Navbar = () => {
             </p>
             <p>
               <NavLink to={"/contact"}>CONTACT</NavLink>
-            </p>
-            <p>
-              <NavLink to={"/cart"}>
-                <ShoppingCartOutlined />
-              </NavLink>
             </p>
           </div>
         </div>

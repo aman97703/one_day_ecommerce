@@ -4,6 +4,7 @@
     border-radius: 12px;
     padding: 10px 20px;
     margin-bottom: 16px;
+    box-shadow: 3px 2px 3px #cacaca;
 }
 
 .cart_card_deleteBTn {

@@ -21,8 +21,6 @@ const ProductPage = () => {
   const allItems = useSelector((state) => getItemByID(state, id));
   const [disable, setDisable] = useState(false);
 
-
-
   useEffect(() => {
     const getProduct = async () => {
       await axios({
@@ -59,7 +57,7 @@ const ProductPage = () => {
                   <p className="body2 color_dark_grey">{product.category}</p>
                   <h4 className="mt-12">{product.title}</h4>
                   <div className="mt-12 d-flex align-items-center">
-                    <Rating value={product.rating.rate} readOnly />
+                    <Rating value={product.rating.rate} readOnly precision={0.5} />
                     <p className="body2 ml-12">
                       {product.rating.count} Reviews
                     </p>
