@@ -49,7 +49,7 @@ const Navbar = () => {
         <div className="nav_drawer_main">
           <div className="navlogo d-flex align-items-center">
             <p>
-              <NavLink to={"/"}>E-commerce</NavLink>
+              <NavLink to={"/"}>OD E-commerce</NavLink>
             </p>
           </div>
           <div className="navLinks_and">
