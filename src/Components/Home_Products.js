@@ -9,9 +9,9 @@ const Home_Products = ({ img, title, desc, rating, price, handleFunc }) => {
         <img src={img} alt="glass" />
       </div>
       <div className="home_prd_title text-center">
-        <h5 className="">{title}</h5>
+        <h5 className="text-overflow1">{title}</h5>
         <p className="caption mt-8">{desc}</p>
-        <div className="mt-16 d-flex align-items-center justify-content-between">
+        <div className="mt-16 d-flex align-items-center justify-content-between pr-10 pl-10">
           <p className="body2 d-flex align-items-center ">
             <span className="ml-12">
               <StarOutline />

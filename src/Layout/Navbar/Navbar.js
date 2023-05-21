@@ -35,16 +35,16 @@ const Navbar = () => {
           </p>
         </div>
         <div className="navLinks">
-          <p className="navLink">
+          <p className="navLink body2">
             <NavLink to={"/"}>HOME</NavLink>
           </p>
-          <p className="navLink">
+          <p className="navLink body2">
             <NavLink to={"/about"}>ABOUT</NavLink>
           </p>
-          <p className="navLink">
+          <p className="navLink body2">
             <NavLink to={"/products"}>PRODUCTS</NavLink>
           </p>
-          <p className="navLink">
+          <p className="navLink body2">
             <NavLink to={"/contact"}>CONTACT</NavLink>
           </p>
           <p>
@@ -65,20 +65,20 @@ const Navbar = () => {
         <div className="nav_drawer_main">
           <div className="navlogo d-flex align-items-center">
             <p>
-              <NavLink to={"/"}>OD E-commerce</NavLink>
+              <NavLink to={"/"}>E-commerce</NavLink>
             </p>
           </div>
           <div className="navLinks_and">
-            <p>
+            <p className="body2">
               <NavLink to={"/"}>HOME</NavLink>
             </p>
-            <p>
+            <p className="body2">
               <NavLink to={"/about"}>ABOUT</NavLink>
             </p>
-            <p>
+            <p className="body2">
               <NavLink to={"/products"}>PRODUCTS</NavLink>
             </p>
-            <p>
+            <p className="body2">
               <NavLink to={"/contact"}>CONTACT</NavLink>
             </p>
           </div>
